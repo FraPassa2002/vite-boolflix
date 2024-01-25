@@ -42,8 +42,14 @@ export default {
                     console.log('SERIES', response.data.results);
 
                     this.store.series = response.data.results;
+                    this.store.searchText = ''
                 });
-        }       
+
+            
+        },
+        resetSearch() {
+
+        }  
     }
 }
 </script>
