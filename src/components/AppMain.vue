@@ -24,6 +24,7 @@ export default {
             <h2>
                 MOVIES
             </h2>
+                
             <ul>
                 <li v-for="(movie, i) in store.movies" :key="i">
                     <SingleMovie 
@@ -37,7 +38,7 @@ export default {
             
         </div>
 
-        <hr>
+        <hr>    
 
         <div>
             <h2>
