@@ -20,10 +20,45 @@ export default {
 
 <template>
     <main>
-        
+        <div>
+            <h2>
+                MOVIES
+            </h2>
+            <ul>
+                <li v-for="(movie, i) in store.movies" :key="i">
+                    <SingleMovie 
+                        :titleOrName="movie.title"
+                        :originalTitleOrName="movie.original_title"
+                        :originalLanguage="movie.original_language"
+                        :voteAvarage="movie.vote_average"
+                    />
+                </li>
+            </ul>
+            
+        </div>
+
+        <hr>
+
+        <div>
+            <h2>
+                SERIES
+            </h2>
+            <ul>
+                <li v-for="(singleSeries, i) in store.series" :key="i">
+                    <SingleMovie 
+                        :titleOrName="singleSeries.name"
+                        :originalTitleOrName="singleSeries.original_name"
+                        :originalLanguage="singleSeries.original_language"
+                        :voteAvarage="singleSeries.vote_average"
+                    />
+                </li>
+            </ul>
+        </div>
     </main>
 </template>
 
 <style lang="scss" scoped>
-
+img {
+    height: 50px;
+}
 </style>
